@@ -2,6 +2,6 @@ test:
  post:
    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-override:
-    - bundle install: # note ':' here
-        timeout: 180 # fail if command has no output for 3 minutes
+ override:
+    - bundle install: 
+        timeout: 180 ;
